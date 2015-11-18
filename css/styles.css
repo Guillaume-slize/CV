@@ -239,7 +239,7 @@ iPhone Section
 /* ==========================================================================
 Swag
 ========================================================================== */
-.swag { background: url('../img/plants-bg.jpg') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-attachment: fixed; padding: 50px 0; }
+.swag { background-color: #636363 ; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-attachment: fixed; padding: 50px 0; }
 .swag h1 { color: #fff; font-size: 40px; text-transform: uppercase; letter-spacing: 5px; }
 .swag h1 span { display: block; font-size: 25px; margin-top: 20px; }
 .down-arrow-btn { width: 40px; height: 40px; border-radius: 50%; -moz-border-radius: 50%; -webkit-border-radius: 50%; -o-border-radius: 50%; background: rgba(61, 201, 179, 0.8); display: inline-block; margin: 10px auto 20px; color: #fff; font-size: 16px; line-height: 40px; text-align: center; }
@@ -261,8 +261,12 @@ a.expand { display: block; position: absolute; z-index: 100; text-align: center;
 .overlay-effect .overlay { bottom: 0; left: 0; right: 0; width: 100%; height: 100%; opacity: 0; }
 .overlay-effect .overlay a.expand { left: 0; right: 0; bottom: 47%; margin: 0 auto -30px auto; }
 .overlay-effect .img.hover .overlay { height: 100%; opacity: 1; }
-.img img { width: -webkit-calc(100% + 40px) !important; width: calc(100% + 40px) !important; -webkit-transition: opacity 0.35s, -webkit-transform 0.35s; transition: opacity 0.35s, transform 0.35s; -moz-transition: opacity 0.35s, -moz-transform 0.35s; -o-transition: opacity 0.35s, -o-transform 0.35s; -webkit-transform: translate3d(-40px, 0, 0); transform: translate3d(-40px, 0, 0); -ms-transform: translate3d(-40px, 0, 0); }
+.img img { width: -webkit-calc(100%) !important; width: calc(100%) !important; -webkit-transition: opacity 0.35s, -webkit-transform 0.35s; transition: opacity 0.35s, transform 0.35s; -moz-transition: opacity 0.35s, -moz-transform 0.35s; -o-transition: opacity 0.35s, -o-transform 0.35s; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); }
 .img:hover img { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -ms-transform: translate3d(-40px, 0, 0); }
+
+/*.img .link  img { width: -webkit-calc(100%+40px) !important; width: calc(100% + 40px) !important; -webkit-transition: opacity 0.35s, -webkit-transform 0.35s; transition: opacity 0.35s, transform 0.35s; -moz-transition: opacity 0.35s, -moz-transform 0.35s; -o-transition: opacity 0.35s, -o-transform 0.35s; -webkit-transform: translate3d(-40px, 0, 0); transform: translate3d(-40px, 0, 0); -ms-transform: translate3d(-40px, 0, 0); }
+.img:hover .link img { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -ms-transform: translate3d(-40px, 0, 0); }*/
+
 .designs { position: absolute; left: 0; right: 0; margin-left: auto; margin-right: auto; top: 50px; }
 /* ==========================================================================
 Subscribe
@@ -322,12 +326,15 @@ Waypoints
 .bounceInLeft, .bounceInRight, .fadeInUp, .fadeInUpDelay, .fadeInDown, .fadeInUpD, .fadeInLeft, .fadeInRight { visibility: visible; }
 .delay-05s { animation-delay: 0.5s; -webkit-animation-delay: 0.5s; }
 .delay-1s { animation-delay: 1s; -webkit-animation-delay: 1s; }
+.delay-15s { animation-delay: 1.5s; -webkit-animation-delay: 1.5s; }
+.delay-20s { animation-delay: 2s; -webkit-animation-delay: 2s; }
+.delay-25s { animation-delay: 2.5s; -webkit-animation-delay: 2.5s; }
 .delay-15s { animation-delay: 1s; -webkit-animation-delay: 1.5s; }
 .wp3 { background: url('../img/diving_black_2.jpg') no-repeat center center; height: 100%; }
 .wp5 { background: url('../img/onewheel.jpg') no-repeat center center; height: 100%; }
 .wp6 { background: url('../img/explorer.jpg') no-repeat center center;  height: 100%; }
 .wp8 { background: url('../img/meeting.jpg') no-repeat center center; height: 100%; }
-
-
+/*---YOUTUBE----*/
+#coverimageforplayer { cursor: pointer; cursor: hand; }
 
 

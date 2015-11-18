@@ -212,7 +212,7 @@ nav ul li a:hover, nav ul li a:focus { text-decoration: none; color: rgba(255, 2
 /* ==========================================================================
 Hero
 ========================================================================== */
-.hero { background: url('') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; padding: 65px 0 100px 0; height: auto; }
+.hero { background: url('') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; padding: 65px 0 65px 0; height: auto; }
 .hero h1 { font-size: 40px; letter-spacing: 12px; margin: 10px; }
 .hero h1 span { color: #CC0033; display: inline-block; }
 .hero p { letter-spacing: 1px; }
@@ -253,7 +253,7 @@ Portfolio
 .effects .img:first-child { margin-left: -15px; }
 .effects .img:last-child { margin-right: 0; }
 .effects .img img { display: block; margin: 0; padding: 0; height: auto; }
-.overlay { display: block; position: absolute; z-index: 20; background: rgba(100, 194, 158, 0.8); overflow: hidden; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
+.overlay { display: block; position: absolute; z-index: 20; background: #CC0033; overflow: hidden; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
 a.close-overlay { display: block; position: absolute; top: 0; right: 0; z-index: 100; width: 45px; height: 45px; font-size: 20px; font-weight: 700; color: #fff; line-height: 45px; text-align: center; background-color: #000; cursor: pointer; }
 a.close-overlay.hidden { display: none; }
 a.expand { display: block; position: absolute; z-index: 100; text-align: center; color: #fff; font-weight: 600; font-size: 14px; text-transform: uppercase; line-height: 30px; }
@@ -323,8 +323,8 @@ Waypoints
 .delay-05s { animation-delay: 0.5s; -webkit-animation-delay: 0.5s; }
 .delay-1s { animation-delay: 1s; -webkit-animation-delay: 1s; }
 .delay-15s { animation-delay: 1s; -webkit-animation-delay: 1.5s; }
-.wp3 { background: url('../img/diving_black.jpg') no-repeat center center; height: 100%; }
-.wp5 { background: url('../img/fabricator.jpg') no-repeat center center; height: 100%; }
+.wp3 { background: url('../img/diving_black_2.jpg') no-repeat center center; height: 100%; }
+.wp5 { background: url('../img/onewheel.jpg') no-repeat center center; height: 100%; }
 .wp6 { background: url('../img/explorer.jpg') no-repeat center center;  height: 100%; }
 .wp8 { background: url('../img/meeting.jpg') no-repeat center center; height: 100%; }
 

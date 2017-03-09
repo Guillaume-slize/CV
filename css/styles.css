@@ -8,7 +8,7 @@ HTML5 display definitions
  
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary { display: block; }
 /* * Corrects `inline-block` display not defined in IE 6/7/8/9 and Firefox 3. */
-audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio, canvas, video { display: inline-block; display: inline; zoom: 1;}
 /* * Prevents modern browsers from displaying `audio` without controls.
 * Remove excess height in iOS 5 devices. */
 audio:not([controls]) { display: none; height: 0; }
@@ -39,7 +39,8 @@ Links
  
 a:focus { outline: thin dotted; }
 /* * Improves readability when focused and also mouse hovered in all browsers. */
-a:active, a:hover { outline: 0; }
+a:active, a:hover  a:focus { outline: 0 !important; }
+a { outline: 0 !important; }
 /* ==========================================================================
 Typography
 ========================================================================== */
@@ -47,6 +48,7 @@ Typography
 * Addresses font sizes within `section` and `article` in Firefox 4+, Safari 5, * and Chrome. */
  
 h1 { font-size: 2em; margin: 0.67em 0; color: #636363; }
+.big { font-size: 2em; margin: 0.67em 0; color: #636363; }
 h2 { font-size: 1.5em; margin: 0.83em 0; }
 h3 { font-size: 1.17em; margin: 1em 0; }
 h4 { font-size: 1em; margin: 1.33em 0; }
@@ -116,14 +118,14 @@ fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.7
 * 3. Corrects alignment displayed oddly in IE 6/7. */
 legend { border: 0; /* 1 */
 	padding: 0; white-space: normal; /* 2 */
-*margin-left: -7px; /* 3 */ }
+margin-left: -7px; /* 3 */ }
 /* * 1. Corrects font size not being inherited in all browsers.
 * 2. Addresses margins set differently in IE 6/7, Firefox 3+, Safari 5, *    and Chrome.
 * 3. Improves appearance and consistency in all browsers. */
 button, input, select, textarea { font-size: 100%; /* 1 */
 	margin: 0; /* 2 */
 	vertical-align: baseline; /* 3 */
-*vertical-align: middle; /* 3 */ }
+vertical-align: middle;} /* 3 */ 
 /* * Addresses Firefox 3+ setting `line-height` on `input` using ` !important` in
 * the UA stylesheet. */
 button, input { line-height: normal; }
@@ -137,7 +139,7 @@ button, input { line-height: normal; }
 button, html input[type="button"], /* 1 */
 input[type="reset"], input[type="submit"] { -webkit-appearance: button; /* 2 */
 	cursor: pointer; /* 3 */
-*overflow: visible; /* 4 */ }
+overflow: visible;} /* 4 */ 
 /* * Re-set default cursor for disabled elements. */
 button[disabled], input[disabled] { cursor: default; }
 /* * 1. Addresses box sizing set to content-box in IE 8/9.
@@ -146,8 +148,8 @@ button[disabled], input[disabled] { cursor: default; }
 *    Known issue:excess padding remains in IE 6. */
 input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */
 	padding: 0; /* 2 */
-	*height: 13px; /* 3 */
-*width: 13px; /* 3 */ }
+	height: 13px; /* 3 */
+width: 13px;} /* 3 */ 
 /* * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
 * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
 *    (include `-moz` to future-proof). */
@@ -176,7 +178,7 @@ a:hover, a:focus { color: #CC0033; text-decoration: none; }
 p { color: #8c9398; word-spacing: 1px; line-height: 25px; font-size: 14px; }
 h2 { font-size: 15px; color: #353535; text-transform: uppercase; font-weight: bold; }
 h2::after { content: " "; border: solid 2px #CC0033; display: block; width: 35px; margin: 25px auto; }
-.section-padding { padding: 90px 0 100px }
+.section-padding { padding: 100px 0 110px }
 .dark-bg { background: #f3f5f8; }
 .light-bg { background-color: #fff; }
 .dark-box { background: #f3f5f8; -webkit-box-shadow: 0px 3px 0px 0px #f0f2f4; -moz-box-shadow: 0px 3px 0px 0px #f0f2f4; box-shadow: 0px 3px 0px 0px #f0f2f4; }
@@ -212,7 +214,7 @@ nav ul li a:hover, nav ul li a:focus { text-decoration: none; color: rgba(255, 2
 /* ==========================================================================
 Hero
 ========================================================================== */
-.hero { background: url('') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; padding: 65px 0 65px 0; height: auto; }
+.hero { background: url('') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; padding: 45px 0 35px 0; height: auto; }
 .hero h1 { font-size: 40px; letter-spacing: 12px; margin: 10px; }
 .hero h1 span { color: #CC0033; display: inline-block; }
 .hero p { letter-spacing: 1px; }
@@ -223,7 +225,7 @@ Intro
 ========================================================================== */
 .intro { background: #f0f0f0; }
 .intro p { margin: 50px 0 0; }
-h1.arrow { font-size: 15px; text-transform: uppercase; color: #636363; letter-spacing: 1px; background: url('../img/h1-bg.png') no-repeat center bottom; padding-bottom: 30px; font-weight: bold; }
+.arrow { font-size: 15px; text-transform: uppercase; color: #636363; letter-spacing: 1px; background: url('../img/h1-bg.png') no-repeat center bottom; padding-bottom: 30px; font-weight: bold; }
 /* ==========================================================================
 Features
 ========================================================================== */
@@ -317,24 +319,31 @@ ul.legals li:last-child::after { content: ""; }
 /* ==========================================================================
 FlexSlider Custom CSS
 ========================================================================== */
-#servicesSlider { margin-top: 70px; }
+.servicesSlider { margin-top: 70px; }
 ul.slides li { margin-bottom: 20px; }
+.slides { padding-bottom: 40px; }
 /* ==========================================================================
 Waypoints
 ========================================================================== */
-.wp1, .wp2, .wp3, .wp4, .wp5, .wp6, .wp7, .wp8, .wp9 { visibility: hidden; }
+.wp1, .wp2, .wp3, .wp4, .wp5, .wp6, .wp7, .wp8, .wp9, .wp10, .wp11, .wp12 { visibility: hidden; }
 .bounceInLeft, .bounceInRight, .fadeInUp, .fadeInUpDelay, .fadeInDown, .fadeInUpD, .fadeInLeft, .fadeInRight { visibility: visible; }
-.delay-05s { animation-delay: 0.5s; -webkit-animation-delay: 0.5s; }
-.delay-1s { animation-delay: 1s; -webkit-animation-delay: 1s; }
-.delay-15s { animation-delay: 1.5s; -webkit-animation-delay: 1.5s; }
-.delay-20s { animation-delay: 2s; -webkit-animation-delay: 2s; }
-.delay-25s { animation-delay: 2.5s; -webkit-animation-delay: 2.5s; }
-.delay-15s { animation-delay: 1s; -webkit-animation-delay: 1.5s; }
+.delay-05s { animation-delay: 0.25s; -webkit-animation-delay: 0.25s }
+.delay-1s { animation-delay: 0.5s; -webkit-animation-delay: 0.5s; }
+.delay-15s { animation-delay: 0.75s; -webkit-animation-delay: 0.75s; }
+.delay-20s { animation-delay: 1s; -webkit-animation-delay: 1s; }
+.delay-25s { animation-delay: 1.25s; -webkit-animation-delay: 1.25s; }
+.delay-15s { animation-delay: 1.50s; -webkit-animation-delay: 1.50s; }
 .wp3 { background: url('../img/diving_black_2.jpg') no-repeat center center; height: 100%; }
 .wp5 { background: url('../img/onewheel.jpg') no-repeat center center; height: 100%; }
-.wp6 { background: url('../img/explorer.jpg') no-repeat center center;  height: 100%; }
-.wp8 { background: url('../img/meeting.jpg') no-repeat center center; height: 100%; }
+.wp6 { background: url('../img/production.jpg') no-repeat center center;  height: 100%; }
+.wp8 { background: url('../img/client.jpg') no-repeat center center; height: 100%; }
+.wp9 { background: url('../img/ideation.jpg') no-repeat center center; height: 100%; }
+.wp10 { background: url('../img/proto.jpg') no-repeat center center; height: 100%; }
+.wp11 { background: url('../img/production1.jpg') no-repeat center center; height: 100%; }
+.wp12 { background: url('../img/clients.jpg') no-repeat center center; height: 100%; }
+
 /*---YOUTUBE----*/
-#coverimageforplayer { cursor: pointer; cursor: hand; }
+#coverimageforplayer { cursor: pointer; }
+iframe { border: 0px}
 
 

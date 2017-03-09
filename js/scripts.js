@@ -52,6 +52,21 @@ $(document).ready(function() {
 	}, {
 		offset: '75%'
 	});
+	$('.wp11').waypoint(function() {
+		$('.wp11').addClass('animated fadeInDown');
+	}, {
+		offset: '75%'
+	});
+	$('.wp12').waypoint(function() {
+		$('.wp12').addClass('animated fadeInDown');
+	}, {
+		offset: '75%'
+	});
+	$('.wp13').waypoint(function() {
+		$('.wp13').addClass('animated fadeInDown');
+	}, {
+		offset: '75%'
+	});
 
 });
 
